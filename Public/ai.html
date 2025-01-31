@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Chat</title>
+    <link rel="stylesheet" href="ai.css"> <!-- Connect CSS -->
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Ask Gemini AI</h2>
+        <textarea id="userInput" placeholder="Type your question here..."></textarea>
+        <button onclick="askGemini()">Submit</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        async function askGemini() {
+            const prompt = document.getElementById("userInput").value;
+
+            if (!prompt.trim()) {
+                alert("Please enter a question.");
+                return;
+            }
+
+            document.getElementById("response").innerText = "Thinking...";
+
+            const response = await fetch("/ask", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ prompt: prompt })
+            });
+
+            const data = await response.json();
+            document.getElementById("response").innerText = data.reply || "No response";
+        }
+    </script>
+</body>
+</html>

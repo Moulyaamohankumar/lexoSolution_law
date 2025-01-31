@@ -1,0 +1,183 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    background-color: #f5f1e8;
+    color: #4a3f35;
+    line-height: 1.8;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Sidebar */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Banner */
+.lawyer-banner {
+    text-align: center;
+    padding: 140px 20px;
+    background-image: url('https://i.pinimg.com/736x/a6/ad/d0/a6add09b322cf78e304c6cc4b8b374d7.jpg');
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.lawyer-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.lawyer-banner h1,
+.lawyer-banner p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Lawyer Services Section */
+.lawyer-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 10px;
+}
+
+/* Service Cards */
+.lawyer-card {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.lawyer-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.lawyer-card h3 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Individual Background Images for Each Card */
+.card1 {
+    background-image: url('https://i.pinimg.com/474x/ae/6c/ba/ae6cbae396916841efea8a63ed0fabc6.jpg');
+}
+
+.card2 {
+    background-image: url('https://i.pinimg.com/474x/0b/9b/4d/0b9b4d27cc6cd8f0da1d3d824ff703e9.jpg');
+}
+
+
+
+.lawyer-card:hover {
+    transform: translateY(-10px);
+}

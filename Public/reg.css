@@ -1,0 +1,174 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    background-color: #f5f1e8;
+    color: #4a3f35;
+    line-height: 1.8;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Main Banner */
+.main-banner {
+    text-align: center;
+    padding: 160px 20px;
+    background-image: url('https://i.pinimg.com/736x/a6/ad/d0/a6add09b322cf78e304c6cc4b8b374d7.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+.main-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main-banner h1,
+.main-banner p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Services Section */
+.services-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+/* Service Cards */
+.service-card {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.service-card h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.service-card a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Background Images for Each Card */
+.card1 {
+    background-image: url('https://i.pinimg.com/474x/ae/6c/ba/ae6cbae396916841efea8a63ed0fabc6.jpg');
+}
+
+.card2 {
+    background-image: url('https://i.pinimg.com/474x/0b/9b/4d/0b9b4d27cc6cd8f0da1d3d824ff703e9.jpg');
+}
+
+.card3 {
+    background-image: url('https://i.pinimg.com/474x/d6/b8/8c/d6b88cc06c6c9d34874627f1b1e34ed9.jpg');
+}
+
+.card4 {
+    background-image: url('https://i.pinimg.com/474x/f3/7b/b2/f37bb2fc5dfcdff8579df82925b2ef83.jpg');
+}
+
+.card5 {
+    background-image: url('https://i.pinimg.com/474x/3b/d8/83/3bd883e32a340efdfd8de5d7f8b2a702.jpg');
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav {
+        gap: 20px;
+    }
+
+    .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+}
