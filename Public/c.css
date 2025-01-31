@@ -1,0 +1,290 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    background-color: #f5f1e8;
+    color: #4a3f35;
+    line-height: 1.8;
+    padding-bottom: 200px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Translucent Black */
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Soft blur effect */
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px; /* Slightly larger font */
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+    font-size: 10px; /* Adjusted for better legibility */
+}
+
+/* Main Banner */
+.main-banner {
+    text-align: center;
+    padding: 140px 20px; /* Increased padding for a longer page */
+    background-image: url('https://i.pinimg.com/736x/6b/96/c1/6b96c11867172877da4ccde8f25e6766.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.main-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main-banner h1,
+.main-banner h2,
+.main-banner p {
+    position: relative;
+    z-index: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjusted gap for more space between the buttons */
+    margin-top: 15px;
+}
+
+.reviews-btn,
+.consultation-btn {
+    padding: 10px 20px; /* Slightly larger padding for consistency */
+    font-size: 14px;
+    border: 2px solid transparent; /* Border for reviews-btn */
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 15px; /* Softer rounded corners */
+    width: 180px; /* Same width for both buttons */
+    height: 45px; /* Same height for both buttons */
+    display: inline-block; /* Ensure they are inline */
+    text-align: center; /* Center text in button */
+}
+
+/* Transparent Button */
+.reviews-btn {
+    background-color: transparent;
+    color: black;
+    border-color: #007bff; /* Blue border */
+}
+
+.reviews-btn:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+}
+
+/* White Button with Black Text */
+.consultation-btn {
+    background-color: white;
+    color: black;
+    border-color: #060807; /* Dark border */
+}
+
+.consultation-btn:hover {
+    background-color: #041408; /* Dark background on hover */
+    color: white; /* White text on hover */
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #fdf8f0;
+    color: #4a3f35;
+    padding: 40px 20px;
+}
+
+/* Google Review Cards - Make them evenly spaced in a row */
+.google-reviews-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin: 40px 0;
+    padding: 0 10px;
+}
+
+.review-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%; /* Adjusted for responsive layout */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-10px); /* Card hover effect */
+}
+
+.google-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.review-card span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Consultation Form Section */
+.consultation-section {
+    background-image: url('https://images.unsplash.com/photo-1555685817-02e4e34db35d');
+    background-size: cover;
+    background-position: center;
+    padding:180px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background image for the form container */
+.consultation-bg {
+    background-image: url('https://i.pinimg.com/474x/fc/c3/0a/fcc30a447d287514c03fdb0b4e1c2d2b.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better contrast */
+}
+
+/* Optional: Form text color for readability */
+.consultation-bg h3, .consultation-bg label, .consultation-bg input, .consultation-bg textarea {
+    color: #333; /* Ensure readability */
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Statistics Section */
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 40px 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.stat p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Google Review Button */
+.reviews-btn {
+    padding: 6px 14px; /* Smaller button */
+    font-size: 12px; /* Smaller text */
+    border-radius: 3px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.reviews-btn:hover {
+    background-color: #0056b3;
+}
